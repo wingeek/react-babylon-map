@@ -1,0 +1,58 @@
+{
+  "name": "react-babylon-map",
+  "version": "0.0.1",
+  "description": "Use Babylon.js inside MapLibre and Mapbox",
+  "main": "dist/cjs/main.js",
+  "module": "dist/es/main.mjs",
+  "types": "dist/types/mapbox.index.d.ts",
+  "sideEffects": false,
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "tsc --project tsconfig.mapbox.json && tsc --project tsconfig.maplibre.json",
+    "build": "pnpm build:maplibre && pnpm build:mapbox",
+    "build:maplibre": "cross-env LIB_MODE=1 MAP_MODE=0 vite build",
+    "postbuild:maplibre": "cross-env LIB_MODE=2 MAP_MODE=0 vite build",
+    "build:mapbox": "cross-env LIB_MODE=1 MAP_MODE=1 vite build",
+    "postbuild:mapbox": "cross-env LIB_MODE=2 MAP_MODE=1 vite build",
+    "lint": "eslint src --ext ts,tsx --fix",
+    "ts:check": "tsc",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "@babylonjs/core": "^9.0.0",
+    "@babylonjs/materials": "^9.0.0",
+    "@types/react": "^18.0.37",
+    "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.59.11",
+    "@typescript-eslint/parser": "^5.59.11",
+    "@vitejs/plugin-react": "^4.0.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.38.0",
+    "happy-dom": "^10.5.2",
+    "mapbox-gl": "^3.9.4",
+    "maplibre-gl": "^5.4.0",
+    "puppeteer-core": "^24.40.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-map-gl": "^8.0.1",
+    "typescript": "~5.0.2",
+    "vite": "^4.4.4",
+    "vitest": "^0.33.0"
+  },
+  "peerDependencies": {
+    "@babylonjs/core": ">=9.0.0",
+    "mapbox-gl": ">=3.5.0",
+    "maplibre-gl": ">=4.0.0",
+    "react": ">=18.0",
+    "react-map-gl": ">=8.0.0"
+  },
+  "peerDependenciesMeta": {
+    "mapbox-gl": {
+      "optional": true
+    },
+    "maplibre-gl": {
+      "optional": true
+    }
+  },
+  "packageManager": "pnpm@10.23.0+sha512.21c4e5698002ade97e4efe8b8b4a89a8de3c85a37919f957e7a0f30f38fbc5bbdd05980ffe29179b2fb6e6e691242e098d945d1601772cad0fef5fb6411e2a4b"
+}
