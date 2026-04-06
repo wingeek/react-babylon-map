@@ -1,0 +1,10 @@
+- [Babylon.js shared GL context](feedback_babylon_gl_context.md) — key patterns for MapLibre shared GL context integration
+- [demo.html reference](reference_demo_html.md) — working Babylon.js + MapLibre integration demo
+- [Overlay vs in-layer modes](feedback_overlay_mode.md) — differences, autoClear, jitter fixes
+- [Coordinates sub-scene approach](feedback_coordinates_subscene.md) — why TransformNode fails, sub-scene pattern
+- [Migration project status](project_migrate_r3m_to_babylon.md) — what's done, what's pending (all stories migrated!)
+- [Debugging Ladle stories](feedback_debugging_stories.md) — check terminal first, not browser/screenshot
+- [Screenshot pipeline](feedback_screenshot_pipeline.md) — puppeteer-core + Chrome in WSL2 for visual comparison
+- [Ladle story naming](feedback_ladle_story_naming.md) — avoid titles starting with numbers
+- [IFC geometry & winding order](feedback_ifc_geometry.md) — @ifc-lite vs web-ifc, Y↔Z swap winding fix, official approach
+- [IFC glass rendering limitation](feedback_ifc_lite_geometry.md) — solid walls without cutouts, bounding box skip approach
