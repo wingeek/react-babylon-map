@@ -1,12 +1,20 @@
 {
   "name": "react-babylon-map",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Use Babylon.js inside MapLibre and Mapbox",
   "main": "dist/cjs/main.js",
   "module": "dist/es/main.mjs",
   "types": "dist/types/mapbox.index.d.ts",
   "sideEffects": false,
   "license": "MIT",
+  "repository": "https://github.com/wingeek/react-babylon-map",
+  "homepage": "https://github.com/wingeek/react-babylon-map",
+  "files": [
+    "dist"
+  ],
+  "bugs": {
+    "url": "https://github.com/wingeek/react-babylon-map/issues"
+  },
   "scripts": {
     "prebuild": "tsc --project tsconfig.mapbox.json && tsc --project tsconfig.maplibre.json",
     "build": "pnpm build:maplibre && pnpm build:mapbox",
